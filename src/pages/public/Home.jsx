@@ -8,7 +8,7 @@ const Home = () => (
         <div className="col-lg-7">
           <h1 className="display-4 fw-bold">EcoCollect</h1>
           <p className="lead mt-3">
-            A learning-friendly waste pickup platform for residents, businesses, institutions, collection teams, and municipal admins.
+            EcoCollect is a web-based platform connecting clients (residents) who need rubbish disposal with garbage collectors who provide collection services. The system helps reduce improper waste disposal habits in the community.
           </p>
           <div className="d-flex flex-wrap gap-2 mt-4">
             <Link to="/register" className="btn btn-cleantrack btn-lg">Report a Full Bin</Link>
