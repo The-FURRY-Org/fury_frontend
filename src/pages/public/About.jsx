@@ -4,15 +4,15 @@ const About = () => (
       <div className="col-lg-8">
         <h1>About EcoCollect</h1>
         <p className="lead">
-          EcoCollect is a student-learning full-stack project that models how waste collection can be coordinated across customers, drivers, waste companies, and administrators.
+          EcoCollect is a community-driven web application that connects residents (clients) with garbage collectors to enable proper waste disposal in the community of Bugujju, Mukono.
         </p>
         <div className="content-card mt-4">
-          <h2 className="h5">What students learn</h2>
+          <h2 className="h5">What EcoCollect does</h2>
           <p>
-            The project demonstrates authentication, protected routes, role-based access control, image uploads, database queries, React state, form handling, and API service modules.
+            The system allows clients to request rubbish collection, collectors to accept and complete jobs, and administrators to oversee operations, process payments via Mobile Money, and resolve complaints.
           </p>
           <p className="mb-0">
-            The code is intentionally direct so beginners can follow how a request moves from a React form to an Express route, controller, middleware, and MariaDB table.
+            EcoCollect promotes proper waste management habits through education, real-time tracking via Google Maps, and a feedback system that builds trust between clients and collectors.
           </p>
         </div>
       </div>
