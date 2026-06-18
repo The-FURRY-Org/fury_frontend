@@ -5,9 +5,8 @@ import AlertMessage from "../../components/AlertMessage";
 
 const roleHome = {
   admin: "/admin",
-  customer: "/customer",
-  driver: "/driver",
-  manager: "/manager"
+  client: "/customer",
+  collector: "/driver"
 };
 
 const Register = () => {
@@ -18,7 +17,7 @@ const Register = () => {
     email: "",
     phone: "",
     password: "",
-    role: "customer"
+    role: "client"
   });
   const [message, setMessage] = useState("");
 
@@ -55,9 +54,8 @@ const Register = () => {
               <input className="form-control" name="phone" value={form.phone} onChange={handleChange} />
               <label className="form-label mt-3">Role</label>
               <select className="form-select" name="role" value={form.role} onChange={handleChange}>
-                <option value="customer">Resident/Customer</option>
-                <option value="driver">Driver/Collector</option>
-                <option value="manager">Waste Company Manager</option>
+                <option value="client">Client (Resident)</option>
+                <option value="collector">Collector</option>
               </select>
               <label className="form-label mt-3">Password</label>
               <input className="form-control" type="password" name="password" value={form.password} onChange={handleChange} required />

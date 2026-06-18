@@ -42,7 +42,7 @@ const App = () => (
       </Route>
 
       <Route element={<ProtectedRoute />}>
-        <Route element={<RoleBasedRoute roles={["customer"]} />}>
+        <Route element={<RoleBasedRoute roles={["client"]} />}>
           <Route path="/customer" element={<DashboardLayout />}>
             <Route index element={<CustomerDashboard />} />
             <Route path="locations" element={<MyLocations />} />
@@ -53,22 +53,12 @@ const App = () => (
           </Route>
         </Route>
 
-        <Route element={<RoleBasedRoute roles={["driver"]} />}>
+        <Route element={<RoleBasedRoute roles={["collector"]} />}>
           <Route path="/driver" element={<DashboardLayout />}>
             <Route index element={<DriverDashboard />} />
             <Route path="jobs" element={<MyAssignedPickups />} />
             <Route path="jobs/:id" element={<PickupJobDetails />} />
             <Route path="completed" element={<CompletedPickups />} />
-          </Route>
-        </Route>
-
-        <Route element={<RoleBasedRoute roles={["manager"]} />}>
-          <Route path="/manager" element={<DashboardLayout />}>
-            <Route index element={<ManagerDashboard />} />
-            <Route path="company" element={<CompanyProfile />} />
-            <Route path="trucks" element={<ManageTrucks />} />
-            <Route path="assign" element={<AssignPickups />} />
-            <Route path="pickups" element={<CompanyPickups />} />
           </Route>
         </Route>
 

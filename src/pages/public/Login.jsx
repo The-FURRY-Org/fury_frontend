@@ -5,9 +5,8 @@ import AlertMessage from "../../components/AlertMessage";
 
 const roleHome = {
   admin: "/admin",
-  customer: "/customer",
-  driver: "/driver",
-  manager: "/manager"
+  client: "/customer",
+  collector: "/driver"
 };
 
 const Login = () => {
@@ -54,7 +53,7 @@ const Login = () => {
               </button>
             </form>
             <p className="small text-muted mt-3 mb-0">
-              Try admin@cleantrack.ug, customer@cleantrack.ug, driver1@cleantrack.ug, or manager@greenroute.ug with password123.
+              Try admin@ecocollect.ug (admin), david@ecocollect.ug (collector), or sarah@ecocollect.ug (client) with password123.
             </p>
             <p className="mt-3 mb-0">No account? <Link to="/register">Register</Link></p>
           </div>
