@@ -37,6 +37,11 @@ const CustomerDashboard = () => {
               </div>
             ))}
           </div>
+          {counts.pending > 0 && (
+            <div className="alert alert-info mb-4">
+              A client has made {counts.pending} pending pickup {counts.pending === 1 ? "order" : "orders"}.
+            </div>
+          )}
           <div className="content-card">
             <h2 className="h5">Recent Pickup Requests</h2>
             <div className="table-responsive border-0">

@@ -4,7 +4,7 @@ import LoadingSpinner from "../../components/LoadingSpinner";
 import StatusBadge from "../../components/StatusBadge";
 import { assignmentService } from "../../services/assignmentService";
 
-const DriverDashboard = () => {
+const CollectorDashboard = () => {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -21,7 +21,7 @@ const DriverDashboard = () => {
 
   return (
     <>
-      <h1 className="h3">Driver Dashboard</h1>
+      <h1 className="h3">Collector Dashboard</h1>
       {loading ? <LoadingSpinner /> : (
         <>
           <div className="row g-3 mb-4">
@@ -55,4 +55,4 @@ const DriverDashboard = () => {
   );
 };
 
-export default DriverDashboard;
+export default CollectorDashboard;

@@ -14,7 +14,7 @@ import AddLocation from "./pages/customer/AddLocation";
 import ReportFullBin from "./pages/customer/ReportFullBin";
 import MyPickupRequests from "./pages/customer/MyPickupRequests";
 import PickupDetails from "./pages/customer/PickupDetails";
-import DriverDashboard from "./pages/driver/DriverDashboard";
+import CollectorDashboard from "./pages/driver/CollectorDashboard";
 import MyAssignedPickups from "./pages/driver/MyAssignedPickups";
 import PickupJobDetails from "./pages/driver/PickupJobDetails";
 import CompletedPickups from "./pages/driver/CompletedPickups";
@@ -55,7 +55,7 @@ const App = () => (
 
         <Route element={<RoleBasedRoute roles={["collector"]} />}>
           <Route path="/driver" element={<DashboardLayout />}>
-            <Route index element={<DriverDashboard />} />
+            <Route index element={<CollectorDashboard />} />
             <Route path="jobs" element={<MyAssignedPickups />} />
             <Route path="jobs/:id" element={<PickupJobDetails />} />
             <Route path="completed" element={<CompletedPickups />} />
