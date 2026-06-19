@@ -1,6 +1,7 @@
 const labels = {
   pending: "Pending",
   assigned: "Assigned",
+  accepted: "Assigned",
   on_the_way: "On the way",
   collected: "Collected",
   failed: "Failed",

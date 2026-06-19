@@ -17,13 +17,13 @@ const CollectorDashboard = () => {
   const [notificationsLoading, setNotificationsLoading] = useState(false);
 
   useEffect(() => {
-    assignmentService.driverJobs().then((response) => setJobs(response.data)).finally(() => setLoading(false));
+    assignmentService.collectorJobs().then((response) => setJobs(response.data)).finally(() => setLoading(false));
     setNotificationsLoading(true);
     notificationService.getNotifications().then((res) => setNotifications(res.data)).catch(() => {}).finally(() => setNotificationsLoading(false));
   }, []);
 
   const counts = {
-    assigned: jobs.filter((job) => job.status === "assigned").length,
+    assigned: jobs.filter((job) => job.status === "assigned" || job.status === "accepted").length,
     on_the_way: jobs.filter((job) => job.status === "on_the_way").length,
     collected: jobs.filter((job) => job.status === "collected").length,
     failed: jobs.filter((job) => job.status === "failed").length

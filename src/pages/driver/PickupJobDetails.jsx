@@ -13,7 +13,7 @@ const PickupJobDetails = () => {
   const [failureReason, setFailureReason] = useState("");
 
   const loadJob = () => {
-    assignmentService.driverJobs().then((response) => {
+    assignmentService.collectorJobs().then((response) => {
       setJob(response.data.find((item) => String(item.id) === String(id)));
     });
   };
