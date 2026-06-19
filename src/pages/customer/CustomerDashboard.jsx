@@ -33,7 +33,7 @@ const CustomerDashboard = () => {
     <>
       <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
         <h1 className="h3 mb-0">Resident Dashboard</h1>
-        <Link to="/customer/report-bin" className="btn btn-cleantrack">Report Full Bin</Link>
+        <Link to="/customer/report-bin" className="btn btn-ecocollect">Report Full Bin</Link>
       </div>
       {loading ? <LoadingSpinner /> : (
         <>
@@ -82,7 +82,7 @@ const CustomerDashboard = () => {
                   <input className="form-control" placeholder="Message" value={messageBody} onChange={(e) => setMessageBody(e.target.value)} />
                 </div>
                 <div className="col-md-2">
-                  <button className="btn btn-cleantrack w-100">Send</button>
+                  <button className="btn btn-ecocollect w-100">Send</button>
                 </div>
               </div>
             </form>
@@ -99,3 +99,4 @@ const CustomerDashboard = () => {
 };
 
 export default CustomerDashboard;
+

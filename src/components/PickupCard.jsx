@@ -18,3 +18,4 @@ const PickupCard = ({ pickup, action }) => (
 );
 
 export default PickupCard;
+

@@ -71,7 +71,7 @@ const CollectorDashboard = () => {
                   <input className="form-control" placeholder="Message" value={messageBody} onChange={(e) => setMessageBody(e.target.value)} />
                 </div>
                 <div className="col-md-2">
-                  <button className="btn btn-cleantrack w-100">Send</button>
+                  <button className="btn btn-ecocollect w-100">Send</button>
                 </div>
               </div>
             </form>
@@ -88,3 +88,4 @@ const CollectorDashboard = () => {
 };
 
 export default CollectorDashboard;
+

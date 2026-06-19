@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem("cleantrack_token");
+    const token = localStorage.getItem("ecocollect_token");
 
     if (!token) {
       setLoading(false);
@@ -19,26 +19,26 @@ export const AuthProvider = ({ children }) => {
     authService
       .me()
       .then((response) => setUser(response.data.user))
-      .catch(() => localStorage.removeItem("cleantrack_token"))
+      .catch(() => localStorage.removeItem("ecocollect_token"))
       .finally(() => setLoading(false));
   }, []);
 
   const login = async (credentials) => {
     const response = await authService.login(credentials);
-    localStorage.setItem("cleantrack_token", response.data.token);
+    localStorage.setItem("ecocollect_token", response.data.token);
     setUser(response.data.user);
     return response.data.user;
   };
 
   const register = async (form) => {
     const response = await authService.register(form);
-    localStorage.setItem("cleantrack_token", response.data.token);
+    localStorage.setItem("ecocollect_token", response.data.token);
     setUser(response.data.user);
     return response.data.user;
   };
 
   const logout = () => {
-    localStorage.removeItem("cleantrack_token");
+    localStorage.removeItem("ecocollect_token");
     setUser(null);
   };
 
@@ -48,3 +48,4 @@ export const AuthProvider = ({ children }) => {
 };
 
 export const useAuth = () => useContext(AuthContext);
+

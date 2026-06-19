@@ -88,7 +88,7 @@ const ReportFullBin = () => {
           <input className="form-control" type="file" name="photo" accept="image/*" onChange={handleChange} />
         </div>
         <div className="col-12">
-          <button className="btn btn-cleantrack">Submit Pickup Request</button>
+          <button className="btn btn-ecocollect">Submit Pickup Request</button>
         </div>
       </form>
     </div>
@@ -96,3 +96,4 @@ const ReportFullBin = () => {
 };
 
 export default ReportFullBin;
+

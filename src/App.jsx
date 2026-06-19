@@ -26,7 +26,6 @@ import CompanyPickups from "./pages/manager/CompanyPickups";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import ManageUsers from "./pages/admin/ManageUsers";
 import ManagePickups from "./pages/admin/ManagePickups";
-import ManageCompanies from "./pages/admin/ManageCompanies";
 import ManageCategories from "./pages/admin/ManageCategories";
 
 const App = () => (
@@ -67,7 +66,7 @@ const App = () => (
             <Route index element={<AdminDashboard />} />
             <Route path="users" element={<ManageUsers />} />
             <Route path="pickups" element={<ManagePickups />} />
-            <Route path="companies" element={<ManageCompanies />} />
+            {/* Companies section removed */}
             <Route path="categories" element={<ManageCategories />} />
           </Route>
         </Route>
@@ -79,3 +78,4 @@ const App = () => (
 );
 
 export default App;
+

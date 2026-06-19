@@ -9,7 +9,7 @@ const CompletedPickups = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    assignmentService.driverJobs().then((response) => {
+    assignmentService.collectorJobs().then((response) => {
       setJobs(response.data.filter((job) => job.status === "collected"));
     }).finally(() => setLoading(false));
   }, []);
@@ -40,3 +40,4 @@ const CompletedPickups = () => {
 };
 
 export default CompletedPickups;
+

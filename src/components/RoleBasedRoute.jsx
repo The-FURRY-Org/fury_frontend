@@ -5,7 +5,8 @@ import LoadingSpinner from "./LoadingSpinner";
 const defaultRoute = {
   admin: "/admin",
   client: "/customer",
-  collector: "/driver"
+  collector: "/driver",
+  manager: "/manager"
 };
 
 const RoleBasedRoute = ({ roles }) => {
@@ -18,3 +19,4 @@ const RoleBasedRoute = ({ roles }) => {
 };
 
 export default RoleBasedRoute;
+

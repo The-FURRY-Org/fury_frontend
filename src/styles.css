@@ -16,13 +16,13 @@ body {
   color: var(--ct-green) !important;
 }
 
-.btn-cleantrack {
+.btn-ecocollect {
   background: var(--ct-green);
   border-color: var(--ct-green);
   color: #fff;
 }
 
-.btn-cleantrack:hover {
+.btn-ecocollect:hover {
   background: var(--ct-green-dark);
   border-color: var(--ct-green-dark);
   color: #fff;
@@ -107,3 +107,4 @@ body {
     border-bottom: 1px solid #dfe6e2;
   }
 }
+

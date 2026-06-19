@@ -3,14 +3,14 @@ import Navbar from "../components/Navbar";
 import { useAuth } from "../context/AuthContext";
 
 const menus = {
-  customer: [
+  client: [
     ["Dashboard", "/customer"],
     ["My Locations", "/customer/locations"],
     ["Add Location", "/customer/locations/new"],
     ["Report Full Bin", "/customer/report-bin"],
     ["Pickup Requests", "/customer/pickups"]
   ],
-  driver: [
+  collector: [
     ["Dashboard", "/driver"],
     ["Assigned Pickups", "/driver/jobs"],
     ["Completed Pickups", "/driver/completed"]
@@ -26,7 +26,6 @@ const menus = {
     ["Dashboard", "/admin"],
     ["Users", "/admin/users"],
     ["Pickups", "/admin/pickups"],
-    ["Companies", "/admin/companies"],
     ["Categories", "/admin/categories"]
   ]
 };
@@ -59,3 +58,4 @@ const DashboardLayout = () => {
 };
 
 export default DashboardLayout;
+

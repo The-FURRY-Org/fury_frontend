@@ -4,8 +4,8 @@ import { useAuth } from "../context/AuthContext";
 
 const roleHome = {
   admin: "/admin",
-  customer: "/customer",
-  driver: "/driver",
+  client: "/customer",
+  collector: "/driver",
   manager: "/manager"
 };
 
@@ -36,7 +36,7 @@ const Navbar = () => {
                 <NavLink className="nav-link" to="/about">About</NavLink>
                 <NavLink className="nav-link" to="/how-it-works">How It Works</NavLink>
                 <NavLink className="btn btn-outline-success ms-lg-2" to="/login">Login</NavLink>
-                <NavLink className="btn btn-cleantrack" to="/register">Register</NavLink>
+                <NavLink className="btn btn-ecocollect" to="/register">Register</NavLink>
               </>
             )}
             {user && (
@@ -56,3 +56,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

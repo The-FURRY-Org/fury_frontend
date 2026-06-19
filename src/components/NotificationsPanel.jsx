@@ -47,3 +47,4 @@ const NotificationsPanel = ({ notifications, setNotifications, loading }) => {
 };
 
 export default NotificationsPanel;
+

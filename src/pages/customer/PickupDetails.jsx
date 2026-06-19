@@ -65,7 +65,7 @@ const PickupDetails = () => {
               <input className="form-control" placeholder="Comment" value={feedback.comment} onChange={(event) => setFeedback({ ...feedback, comment: event.target.value })} />
             </div>
             <div className="col-md-2">
-              <button className="btn btn-cleantrack w-100">Send</button>
+              <button className="btn btn-ecocollect w-100">Send</button>
             </div>
           </div>
         </form>
@@ -75,3 +75,4 @@ const PickupDetails = () => {
 };
 
 export default PickupDetails;
+

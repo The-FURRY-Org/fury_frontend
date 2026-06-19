@@ -48,7 +48,7 @@ const Login = () => {
               <input className="form-control" type="email" name="email" value={form.email} onChange={handleChange} required />
               <label className="form-label mt-3">Password</label>
               <input className="form-control" type="password" name="password" value={form.password} onChange={handleChange} required />
-              <button className="btn btn-cleantrack w-100 mt-4" disabled={loading}>
+              <button className="btn btn-ecocollect w-100 mt-4" disabled={loading}>
                 {loading ? "Logging in..." : "Login"}
               </button>
             </form>
@@ -64,3 +64,4 @@ const Login = () => {
 };
 
 export default Login;
+

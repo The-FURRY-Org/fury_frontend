@@ -28,7 +28,11 @@ const ManageUsers = () => {
         <div className="row g-2">
           <div className="col-md-6">
             <select className="form-select" onChange={(e) => setFilters({ ...filters, role: e.target.value })}>
-              <option value="">All roles</option><option value="admin">Admin</option><option value="customer">Customer</option><option value="driver">Driver</option><option value="manager">Manager</option>
+              <option value="">All roles</option>
+              <option value="admin">Admin</option>
+              <option value="client">Client</option>
+              <option value="collector">Collector</option>
+              <option value="manager">Manager</option>
             </select>
           </div>
           <div className="col-md-6">
@@ -65,3 +69,4 @@ const ManageUsers = () => {
 };
 
 export default ManageUsers;
+

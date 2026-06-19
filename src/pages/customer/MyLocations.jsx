@@ -27,7 +27,7 @@ const MyLocations = () => {
     <>
       <div className="d-flex justify-content-between align-items-center mb-3">
         <h1 className="h3 mb-0">My Locations</h1>
-        <Link className="btn btn-cleantrack" to="/customer/locations/new">Add Location</Link>
+        <Link className="btn btn-ecocollect" to="/customer/locations/new">Add Location</Link>
       </div>
       <AlertMessage type="success" message={message} />
       {loading ? <LoadingSpinner /> : (
@@ -49,3 +49,4 @@ const MyLocations = () => {
 };
 
 export default MyLocations;
+

@@ -73,7 +73,7 @@ const AddLocation = () => {
           <input className="form-control" name="longitude" value={form.longitude} onChange={handleChange} />
         </div>
         <div className="col-12">
-          <button className="btn btn-cleantrack">Save Location</button>
+          <button className="btn btn-ecocollect">Save Location</button>
         </div>
       </form>
     </div>
@@ -81,3 +81,4 @@ const AddLocation = () => {
 };
 
 export default AddLocation;
+

@@ -72,7 +72,7 @@ const PickupJobDetails = () => {
             <textarea className="form-control" value={completeForm.collection_notes} onChange={(e) => setCompleteForm({ ...completeForm, collection_notes: e.target.value })}></textarea>
             <label className="form-label mt-3">Proof photo</label>
             <input className="form-control" type="file" accept="image/*" onChange={(e) => setCompleteForm({ ...completeForm, proof_photo: e.target.files[0] })} />
-            <button className="btn btn-cleantrack mt-3">Mark Collected</button>
+            <button className="btn btn-ecocollect mt-3">Mark Collected</button>
           </form>
         </div>
         <div className="col-lg-6">
@@ -89,3 +89,4 @@ const PickupJobDetails = () => {
 };
 
 export default PickupJobDetails;
+

@@ -55,7 +55,7 @@ const AdminDashboard = () => {
                       <div className="mt-2">
                         <input className="form-control mb-2" placeholder="Reply message" value={replyTargets[n.id].text || ""} onChange={(e) => setReplyTargets((s) => ({ ...s, [n.id]: { ...s[n.id], text: e.target.value } }))} />
                         <div className="d-flex gap-2">
-                          <button className="btn btn-sm btn-cleantrack" onClick={async () => {
+                          <button className="btn btn-sm btn-ecocollect" onClick={async () => {
                             const content = replyTargets[n.id]?.text || "";
                             if (!content) return;
                             await adminService.sendNotification({ user_id: n.sender_id, title: `Reply: ${n.title}`, message: content });
@@ -88,3 +88,4 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
+

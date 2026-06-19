@@ -3,14 +3,14 @@ const HowItWorks = () => (
     <h1>How It Works</h1>
     <div className="row g-3 mt-2">
       {[
-        ["1", "Create an account", "Sign up as a customer or collector with your name, email, phone, and location."],
-        ["2", "Customer requests pickup", "The customer logs in, selects waste type, enters the pickup location, and submits a request."],
+        ["1", "Create an account", "Sign up as a client or collector with your name, email, phone, and location."],
+        ["2", "Client requests pickup", "The client logs in, selects waste type, enters the pickup location, and submits a request."],
         ["3", "Collector accepts job", "The collector logs in, views available jobs, accepts a nearby request, and the status changes to accepted."],
-        ["4", "Collector heads to pickup", "The collector uses maps to locate the customer, arrives at the pickup point, and collects the waste."],
+        ["4", "Collector heads to pickup", "The collector uses maps to locate the client, arrives at the pickup point, and collects the waste."],
         ["5", "Complete collection", "The collector takes the waste to the disposal site, marks the job completed, and records the details."],
-        ["6", "Customer pays", "The customer receives a payment request and pays via mobile money such as MTN MoMo or Airtel Money."],
+        ["6", "Client pays", "The client receives a payment request and pays via mobile money such as MTN MoMo or Airtel Money."],
         ["7", "System splits payment", "The platform fee is deducted, and the remaining amount is sent to the collector's mobile money account."],
-        ["8", "Feedback and rating", "The customer rates the collector, the collector rates the customer, and both leave comments for community trust."],
+        ["8", "Feedback and rating", "The client rates the collector, the collector rates the client, and both leave comments for community trust."],
         ["9", "Admin oversight", "Admins monitor jobs, verify collectors, approve feedback, and resolve complaints."],
         ["10", "Continuous improvement", "The system helps customers and collectors learn proper waste habits and uses data to improve service."],
       ].map(([number, title, text]) => (
@@ -34,3 +34,4 @@ const HowItWorks = () => (
 );
 
 export default HowItWorks;
+

@@ -59,7 +59,7 @@ const Register = () => {
               </select>
               <label className="form-label mt-3">Password</label>
               <input className="form-control" type="password" name="password" value={form.password} onChange={handleChange} required />
-              <button className="btn btn-cleantrack w-100 mt-4">Register</button>
+              <button className="btn btn-ecocollect w-100 mt-4">Register</button>
             </form>
             <p className="mt-3 mb-0">Already have an account? <Link to="/login">Login</Link></p>
           </div>
@@ -70,3 +70,4 @@ const Register = () => {
 };
 
 export default Register;
+

@@ -35,7 +35,7 @@ Set `VITE_API_URL=http://localhost:5000/api` in `.env`.
 The backend must also be running:
 
 ```bash
-cd ../cleantrack-backend
+cd ../fury_backend
 npm run dev
 ```
 
@@ -44,7 +44,7 @@ npm run dev
 From the parent folder that contains both repositories:
 
 ```bash
-cd cleantrack-backend
+cd fury_backend
 npm install
 cp .env.example .env
 npm run db:setup
@@ -54,7 +54,7 @@ npm run dev
 In a second terminal:
 
 ```bash
-cd cleantrack-frontend
+cd fury_frontend
 npm install
 cp .env.example .env
 npm run dev
@@ -84,7 +84,7 @@ Public pages:
 - `/login`
 - `/register`
 
-Customer pages:
+Client pages:
 
 - `/customer`
 - `/customer/locations`
@@ -93,7 +93,7 @@ Customer pages:
 - `/customer/pickups`
 - `/customer/pickups/:id`
 
-Driver pages:
+Collector pages:
 
 - `/driver`
 - `/driver/jobs`
@@ -128,14 +128,14 @@ The frontend does not call Axios directly from every component. Instead, files s
 
 All seed accounts use password `password123`.
 
-- Admin: `admin@cleantrack.ug`
-- Customer: `customer@cleantrack.ug`
-- Driver: `driver1@cleantrack.ug`
-- Manager: `manager@greenroute.ug`
+- Admin: `admin@ecocollect.ug`
+- Collector: `david@ecocollect.ug`
+- Client: `sarah@ecocollect.ug`
+- Client: `peter@example.com`
 
 ## How the Frontend Talks to the Backend
 
-`services/api.js` creates one Axios instance with the backend URL. Its interceptor reads `cleantrack_token` from `localStorage` and attaches it to each request. That token is created by the backend during login or registration.
+`services/api.js` creates one Axios instance with the backend URL. Its interceptor reads `ecocollect_token` from `localStorage` and attaches it to each request. That token is created by the backend during login or registration.
 
 ## Repository Notes
 

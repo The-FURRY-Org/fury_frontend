@@ -56,3 +56,4 @@ const ManagePickups = () => {
 };
 
 export default ManagePickups;
+

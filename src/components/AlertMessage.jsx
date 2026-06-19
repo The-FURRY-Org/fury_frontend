@@ -4,3 +4,4 @@ const AlertMessage = ({ type = "info", message }) => {
 };
 
 export default AlertMessage;
+

@@ -53,10 +53,11 @@ const CompanyProfile = () => {
           <label className="form-label">Address</label>
           <textarea className="form-control" name="address" value={company.address || ""} onChange={handleChange}></textarea>
         </div>
-        <div className="col-12"><button className="btn btn-cleantrack">Save Company</button></div>
+        <div className="col-12"><button className="btn btn-ecocollect">Save Company</button></div>
       </form>
     </div>
   );
 };
 
 export default CompanyProfile;
+

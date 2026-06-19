@@ -64,7 +64,7 @@ const AssignPickups = () => {
           <div className="col-lg-3">
             <input className="form-control" placeholder="Driver user ID" value={form.driver_id} onChange={(e) => setForm({ ...form, driver_id: e.target.value })} required />
           </div>
-          <div className="col-lg-2"><button className="btn btn-cleantrack w-100">Assign</button></div>
+          <div className="col-lg-2"><button className="btn btn-ecocollect w-100">Assign</button></div>
         </form>
       </div>
       {loading ? <LoadingSpinner /> : (
@@ -90,3 +90,4 @@ const AssignPickups = () => {
 };
 
 export default AssignPickups;
+

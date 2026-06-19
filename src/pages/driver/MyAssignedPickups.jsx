@@ -10,7 +10,7 @@ const MyAssignedPickups = () => {
   const [filters, setFilters] = useState({ status: "", district: "", urgency: "" });
 
   useEffect(() => {
-    assignmentService.driverJobs().then((response) => setJobs(response.data)).finally(() => setLoading(false));
+    assignmentService.collectorJobs().then((response) => setJobs(response.data)).finally(() => setLoading(false));
   }, []);
 
   const filtered = useMemo(() => jobs.filter((job) => (
@@ -51,3 +51,4 @@ const MyAssignedPickups = () => {
 };
 
 export default MyAssignedPickups;
+

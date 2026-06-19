@@ -11,7 +11,7 @@ const Home = () => (
             EcoCollect is a web-based platform connecting clients (residents) who need rubbish disposal with garbage collectors who provide collection services. The system helps reduce improper waste disposal habits in the community.
           </p>
           <div className="d-flex flex-wrap gap-2 mt-4">
-            <Link to="/register" className="btn btn-cleantrack btn-lg">Request Collection</Link>
+            <Link to="/register" className="btn btn-ecocollect btn-lg">Request Collection</Link>
             <Link to="/how-it-works" className="btn btn-outline-light btn-lg">How It Works</Link>
           </div>
         </div>
@@ -38,3 +38,4 @@ const Home = () => (
 );
 
 export default Home;
+

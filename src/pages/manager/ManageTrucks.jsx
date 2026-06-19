@@ -48,7 +48,7 @@ const ManageTrucks = () => {
               <option value="active">Active</option><option value="maintenance">Maintenance</option><option value="inactive">Inactive</option>
             </select>
           </div>
-          <div className="col-md-1"><button className="btn btn-cleantrack w-100">Add</button></div>
+          <div className="col-md-1"><button className="btn btn-ecocollect w-100">Add</button></div>
         </form>
       </div>
       {loading ? <LoadingSpinner /> : (
@@ -74,3 +74,4 @@ const ManageTrucks = () => {
 };
 
 export default ManageTrucks;
+
