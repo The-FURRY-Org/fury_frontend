@@ -8,22 +8,51 @@ const labels = {
   pending_pickups: "Pending",
   completed_pickups: "Completed",
   failed_pickups: "Failed",
-  active_trucks: "Active trucks",
-  active_drivers: "Active drivers",
-  waste_collected_this_month: "Waste this month"
+  active_collectors: "Active collectors",
+  active_clients: "Active clients",
+  waste_collected_this_month: "Waste this month",
+  total_payments: "Payments made",
+  total_payment_value: "Payment value",
+  pending_payments: "Pending payments"
 };
 
 const AdminDashboard = () => {
-  const [stats, setStats] = useState(null);
+  const [stats, setStats] = useState({
+    total_pickup_requests: 0,
+    pending_pickups: 0,
+    completed_pickups: 0,
+    failed_pickups: 0,
+    active_collectors: 0,
+    active_clients: 0,
+    waste_collected_this_month: 0,
+    total_payments: 0,
+    total_payment_value: 0,
+    pending_payments: 0
+  });
+  const [loading, setLoading] = useState(true);
   const [notifications, setNotifications] = useState([]);
   const [replyTargets, setReplyTargets] = useState({});
 
   useEffect(() => {
-    adminService.stats().then((response) => setStats(response.data));
-    adminService.notifications().then((res) => setNotifications(res.data)).catch(() => {});
+    const loadDashboard = async () => {
+      try {
+        const [statsResponse, notificationsResponse] = await Promise.all([
+          adminService.stats(),
+          adminService.notifications()
+        ]);
+        setStats((prev) => ({ ...prev, ...statsResponse.data }));
+        setNotifications(notificationsResponse.data || []);
+      } catch (error) {
+        console.error("Failed to load admin dashboard", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadDashboard();
   }, []);
 
-  if (!stats) return <LoadingSpinner />;
+  if (loading) return <LoadingSpinner />;
 
   return (
     <>

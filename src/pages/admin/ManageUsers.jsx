@@ -32,7 +32,6 @@ const ManageUsers = () => {
               <option value="admin">Admin</option>
               <option value="client">Client</option>
               <option value="collector">Collector</option>
-              <option value="manager">Manager</option>
             </select>
           </div>
           <div className="col-md-6">

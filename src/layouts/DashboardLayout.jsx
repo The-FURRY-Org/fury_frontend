@@ -8,25 +8,28 @@ const menus = {
     ["My Locations", "/customer/locations"],
     ["Add Location", "/customer/locations/new"],
     ["Report Full Bin", "/customer/report-bin"],
-    ["Pickup Requests", "/customer/pickups"]
+    ["Pickup Requests", "/customer/pickups"],
+    ["EduCollect", "/educollect"],
+    ["Assistant", "/assistant"]
   ],
   collector: [
     ["Dashboard", "/driver"],
     ["Assigned Pickups", "/driver/jobs"],
-    ["Completed Pickups", "/driver/completed"]
-  ],
-  manager: [
-    ["Dashboard", "/manager"],
-    ["Company Profile", "/manager/company"],
-    ["Manage Trucks", "/manager/trucks"],
-    ["Assign Pickups", "/manager/assign"],
-    ["Company Pickups", "/manager/pickups"]
+    ["Completed Pickups", "/driver/completed"],
+    ["EduCollect", "/educollect"],
+    ["Assistant", "/assistant"]
   ],
   admin: [
     ["Dashboard", "/admin"],
     ["Users", "/admin/users"],
+    ["Collectors", "/admin/collectors"],
+    ["Payments", "/admin/payments"],
     ["Pickups", "/admin/pickups"],
-    ["Categories", "/admin/categories"]
+    ["Categories", "/admin/categories"],
+    ["Moderation Logs", "/admin/moderation"],
+    ["Moderation Settings", "/admin/moderation/settings"],
+    ["EduCollect", "/educollect"],
+    ["Assistant", "/assistant"]
   ]
 };
 

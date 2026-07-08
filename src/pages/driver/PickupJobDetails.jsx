@@ -58,9 +58,22 @@ const PickupJobDetails = () => {
       <AlertMessage type="success" message={message} />
       <p>{job.description}</p>
       <p><strong>Address:</strong> {job.address_details || "Not provided"}</p>
+      <div className="border rounded p-3 mb-4">
+        <h2 className="h5">Tracking progress</h2>
+        <div className="d-flex flex-column gap-2 mt-3">
+          {(job.tracking || []).map((step) => (
+            <div key={step.key} className={`d-flex align-items-center gap-2 ${step.current ? "fw-semibold" : "text-muted"}`}>
+              <span className={`badge ${step.completed ? "bg-success" : "bg-light text-dark"}`}>
+                {step.completed ? "✓" : "○"}
+              </span>
+              <span>{step.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
       <div className="d-flex flex-wrap gap-2 mb-4">
-        <button className="btn btn-outline-primary" onClick={() => updateStatus("assigned")}>Assigned</button>
-        <button className="btn btn-outline-secondary" onClick={() => updateStatus("on_the_way")}>On the way</button>
+        <button className="btn btn-outline-primary" onClick={() => updateStatus("accepted")}>Accept / start</button>
+        <button className="btn btn-outline-secondary" onClick={() => updateStatus("in_progress")}>On the way</button>
       </div>
       <div className="row g-4">
         <div className="col-lg-6">

@@ -5,8 +5,7 @@ import { useAuth } from "../context/AuthContext";
 const roleHome = {
   admin: "/admin",
   client: "/customer",
-  collector: "/driver",
-  manager: "/manager"
+  collector: "/driver"
 };
 
 const Navbar = () => {

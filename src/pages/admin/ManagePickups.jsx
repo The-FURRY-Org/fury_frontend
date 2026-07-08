@@ -44,7 +44,12 @@ const ManagePickups = () => {
                   <td>{pickup.location_name}, {pickup.district}</td>
                   <td>{pickup.waste_type}</td>
                   <td><StatusBadge status={pickup.status} /></td>
-                  <td>{formatDate(pickup.requested_at)}</td>
+                  <td>
+                    <div>{formatDate(pickup.requested_at)}</div>
+                    <div className="small text-muted">
+                      {pickup.tracking?.filter((step) => step.completed).length || 0}/5 steps complete
+                    </div>
+                  </td>
                 </tr>
               ))}
             </tbody>

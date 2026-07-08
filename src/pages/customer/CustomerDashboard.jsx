@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { pickupService } from "../../services/pickupService";
 import { feedbackService } from "../../services/feedbackService";
 import { notificationService } from "../../services/notificationService";
+import { paymentService } from "../../services/paymentService";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import StatusBadge from "../../components/StatusBadge";
 import NotificationsPanel from "../../components/NotificationsPanel";
@@ -15,9 +16,11 @@ const CustomerDashboard = () => {
   const [feedbackMsg, setFeedbackMsg] = useState("");
   const [notifications, setNotifications] = useState([]);
   const [notificationsLoading, setNotificationsLoading] = useState(false);
+  const [payments, setPayments] = useState([]);
 
   useEffect(() => {
     pickupService.myRequests().then((response) => setPickups(response.data)).finally(() => setLoading(false));
+    paymentService.myPayments().then((response) => setPayments(response.data)).catch(() => {});
     setNotificationsLoading(true);
     notificationService.getNotifications().then((res) => setNotifications(res.data)).catch(() => {}).finally(() => setNotificationsLoading(false));
   }, []);
@@ -87,6 +90,30 @@ const CustomerDashboard = () => {
               </div>
             </form>
             <div className="mt-2 text-success">{feedbackMsg}</div>
+          </div>
+          <div className="content-card mt-4">
+            <h2 className="h5">Payment History</h2>
+            {payments.length === 0 ? (
+              <div className="text-muted">No mobile money payments recorded yet.</div>
+            ) : (
+              <div className="table-responsive">
+                <table className="table align-middle mb-0">
+                  <thead>
+                    <tr><th>Reference</th><th>Provider</th><th>Amount</th><th>Status</th></tr>
+                  </thead>
+                  <tbody>
+                    {payments.map((payment) => (
+                      <tr key={payment.id}>
+                        <td>{payment.transaction_ref}</td>
+                        <td>{payment.provider === "mtn_momo" ? "MTN MoMo" : "Airtel Money"}</td>
+                        <td>{Number(payment.amount).toLocaleString()} {payment.currency}</td>
+                        <td><span className={`badge bg-${payment.status === "paid" ? "success" : "warning"}`}>{payment.status}</span></td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
           <div className="content-card mt-4">
             <h2 className="h5">Messages from Admin</h2>

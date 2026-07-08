@@ -18,15 +18,16 @@ import CollectorDashboard from "./pages/driver/CollectorDashboard";
 import MyAssignedPickups from "./pages/driver/MyAssignedPickups";
 import PickupJobDetails from "./pages/driver/PickupJobDetails";
 import CompletedPickups from "./pages/driver/CompletedPickups";
-import ManagerDashboard from "./pages/manager/ManagerDashboard";
-import CompanyProfile from "./pages/manager/CompanyProfile";
-import ManageTrucks from "./pages/manager/ManageTrucks";
-import AssignPickups from "./pages/manager/AssignPickups";
-import CompanyPickups from "./pages/manager/CompanyPickups";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import ManageUsers from "./pages/admin/ManageUsers";
 import ManagePickups from "./pages/admin/ManagePickups";
 import ManageCategories from "./pages/admin/ManageCategories";
+import ManageCollectors from "./pages/admin/ManageCollectors";
+import Payments from "./pages/admin/Payments";
+import EduCollect from "./pages/EduCollect";
+import Assistant from "./pages/Assistant";
+import ModerationLogs from "./pages/admin/ModerationLogs";
+import ModerationSettings from "./pages/admin/ModerationSettings";
 
 const App = () => (
   <BrowserRouter>
@@ -65,9 +66,25 @@ const App = () => (
           <Route path="/admin" element={<DashboardLayout />}>
             <Route index element={<AdminDashboard />} />
             <Route path="users" element={<ManageUsers />} />
+            <Route path="collectors" element={<ManageCollectors />} />
+            <Route path="payments" element={<Payments />} />
             <Route path="pickups" element={<ManagePickups />} />
             {/* Companies section removed */}
             <Route path="categories" element={<ManageCategories />} />
+            <Route path="moderation" element={<ModerationLogs />} />
+            <Route path="moderation/settings" element={<ModerationSettings />} />
+          </Route>
+        </Route>
+
+        <Route element={<RoleBasedRoute roles={["admin", "client", "collector"]} />}>
+          <Route path="/educollect" element={<DashboardLayout />}>
+            <Route index element={<EduCollect />} />
+          </Route>
+        </Route>
+
+        <Route element={<RoleBasedRoute roles={["admin", "client", "collector"]} />}>
+          <Route path="/assistant" element={<DashboardLayout />}>
+            <Route index element={<Assistant />} />
           </Route>
         </Route>
       </Route>
