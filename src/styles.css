@@ -11,6 +11,20 @@ body {
   color: var(--ct-ink);
 }
 
+.login-page {
+  min-height: calc(100vh - 56px);
+  background-image: url('/rubbish_throw.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.login-page .content-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 24px 60px rgba(17, 51, 36, 0.16);
+}
+
 .navbar-brand {
   font-weight: 800;
   color: var(--ct-green) !important;

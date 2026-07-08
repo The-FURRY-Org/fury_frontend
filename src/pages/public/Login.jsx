@@ -37,7 +37,7 @@ const Login = () => {
   };
 
   return (
-    <main className="container py-5">
+    <main className="container py-5 login-page">
       <div className="row justify-content-center">
         <div className="col-md-7 col-lg-5">
           <div className="content-card">
