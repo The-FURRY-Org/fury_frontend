@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import AssistantWidget from "../components/AssistantWidget";
 import { useAuth } from "../context/AuthContext";
 
 const menus = {
@@ -9,15 +10,13 @@ const menus = {
     ["Add Location", "/customer/locations/new"],
     ["Report Full Bin", "/customer/report-bin"],
     ["Pickup Requests", "/customer/pickups"],
-    ["EduCollect", "/educollect"],
-    ["Assistant", "/assistant"]
+    ["EduCollect", "/educollect"]
   ],
   collector: [
     ["Dashboard", "/driver"],
     ["Assigned Pickups", "/driver/jobs"],
     ["Completed Pickups", "/driver/completed"],
-    ["EduCollect", "/educollect"],
-    ["Assistant", "/assistant"]
+    ["EduCollect", "/educollect"]
   ],
   admin: [
     ["Dashboard", "/admin"],
@@ -28,8 +27,7 @@ const menus = {
     ["Categories", "/admin/categories"],
     ["Moderation Logs", "/admin/moderation"],
     ["Moderation Settings", "/admin/moderation/settings"],
-    ["EduCollect", "/educollect"],
-    ["Assistant", "/assistant"]
+    ["EduCollect", "/educollect"]
   ]
 };
 
@@ -56,6 +54,7 @@ const DashboardLayout = () => {
           </main>
         </div>
       </div>
+      <AssistantWidget />
     </>
   );
 };
