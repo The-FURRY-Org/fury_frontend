@@ -21,7 +21,6 @@ const menus = {
   admin: [
     ["Dashboard", "/admin"],
     ["Users", "/admin/users"],
-    ["Collectors", "/admin/collectors"],
     ["Payments", "/admin/payments"],
     ["Pickups", "/admin/pickups"],
     ["Categories", "/admin/categories"],

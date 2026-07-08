@@ -22,7 +22,6 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import ManageUsers from "./pages/admin/ManageUsers";
 import ManagePickups from "./pages/admin/ManagePickups";
 import ManageCategories from "./pages/admin/ManageCategories";
-import ManageCollectors from "./pages/admin/ManageCollectors";
 import Payments from "./pages/admin/Payments";
 import EduCollect from "./pages/EduCollect";
 import Assistant from "./pages/Assistant";
@@ -66,7 +65,6 @@ const App = () => (
           <Route path="/admin" element={<DashboardLayout />}>
             <Route index element={<AdminDashboard />} />
             <Route path="users" element={<ManageUsers />} />
-            <Route path="collectors" element={<ManageCollectors />} />
             <Route path="payments" element={<Payments />} />
             <Route path="pickups" element={<ManagePickups />} />
             {/* Companies section removed */}
