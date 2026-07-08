@@ -84,7 +84,7 @@ const PickupDetails = () => {
             <p className="text-muted">Choose MTN MoMo or Airtel Money to complete payment for this collection.</p>
             <div className="row g-2">
               <div className="col-md-3">
-                <select className="form-select" value={payment.provider} onChange={(event) => setPayment({ ...payment, provider: event.target.value })}>
+                <select className={`form-select payment-provider-select ${payment.provider}`} value={payment.provider} onChange={(event) => setPayment({ ...payment, provider: event.target.value })}>
                   <option value="mtn_momo">MTN MoMo</option>
                   <option value="airtel_money">Airtel Money</option>
                 </select>

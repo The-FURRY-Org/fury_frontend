@@ -119,6 +119,34 @@ body {
   background: var(--ct-green-dark);
 }
 
+.payment-provider-select.mtn_momo {
+  border-color: #ffd400;
+  background: rgba(255, 212, 0, 0.12);
+  color: #3b2d00;
+}
+
+.payment-provider-select.mtn_momo:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 212, 0, 0.25);
+}
+
+.payment-provider-select.airtel_money {
+  border-color: #ef0d3c;
+  background: rgba(239, 13, 60, 0.1);
+  color: #611421;
+}
+
+.payment-provider-select.airtel_money:focus {
+  box-shadow: 0 0 0 0.2rem rgba(239, 13, 60, 0.22);
+}
+
+.payment-provider-select option[value="mtn_momo"] {
+  background: #fff8d9;
+}
+
+.payment-provider-select option[value="airtel_money"] {
+  background: #fde6ee;
+}
+
 .assistant-bot-icon {
   font-size: 1.35rem;
 }
