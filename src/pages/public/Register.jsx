@@ -39,7 +39,7 @@ const Register = () => {
   };
 
   return (
-    <main className="container py-5">
+    <main className="container py-5 login-page">
       <div className="row justify-content-center">
         <div className="col-lg-6">
           <div className="content-card">
