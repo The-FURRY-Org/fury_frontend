@@ -25,6 +25,38 @@ body {
   box-shadow: 0 24px 60px rgba(17, 51, 36, 0.16);
 }
 
+/* Drop-in animation for login card */
+@keyframes login-drop-in {
+  0% {
+    transform: translateY(-40px) scale(0.995);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(-18px) scale(0.998);
+    opacity: 0.4;
+  }
+  70% {
+    transform: translateY(8px) scale(1.003);
+    opacity: 0.92;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.login-page .content-card {
+  /* start with a short delay so the background is visible first, then a gentle fade-in drop */
+  animation: login-drop-in 720ms cubic-bezier(.22,.66,.35,1) 140ms both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-page .content-card {
+    animation: none;
+    transform: none;
+  }
+}
+
 .navbar-brand {
   font-weight: 800;
   color: var(--ct-green) !important;
