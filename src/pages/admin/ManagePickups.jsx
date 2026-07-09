@@ -24,6 +24,8 @@ const ManagePickups = () => {
     && (!filters.date || String(pickup.requested_at).startsWith(filters.date))
   )), [pickups, filters]);
 
+  const isReassignable = (status) => !["completed", "cancelled"].includes(status);
+
   const handleCollectorChange = (pickupId, collectorId) => {
     setSelectedCollectors((prev) => ({ ...prev, [pickupId]: collectorId }));
   };
@@ -55,6 +57,11 @@ const ManagePickups = () => {
     <>
       <h1 className="h3">Manage Pickups</h1>
       <div className="content-card mb-3">
+        {filtered.length > 0 && (
+          <div className="alert alert-info py-2 mb-3">
+            Only pending, accepted, or in-progress pickups can be reassigned.
+          </div>
+        )}
         <div className="row g-2">
           <div className="col-md"><input className="form-control" placeholder="District" onChange={(e) => setFilters({ ...filters, district: e.target.value })} /></div>
           <div className="col-md"><input className="form-control" placeholder="Waste" onChange={(e) => setFilters({ ...filters, waste: e.target.value })} /></div>
@@ -82,7 +89,7 @@ const ManagePickups = () => {
                     </div>
                   </td>
                   <td>
-                    {(pickup.status !== "completed" && pickup.status !== "cancelled") ? (
+                    {isReassignable(pickup.status) ? (
                       <div className="d-flex gap-2 align-items-center">
                         <select
                           className="form-select form-select-sm"

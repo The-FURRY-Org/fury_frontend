@@ -2,7 +2,7 @@ import axios from "axios";
 
 // All service files use this Axios instance so the API base URL and token logic stay in one place.
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000/api"
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5001/api"
 });
 
 api.interceptors.request.use((config) => {
