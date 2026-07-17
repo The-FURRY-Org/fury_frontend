@@ -36,6 +36,18 @@ const EduCollect = () => {
     }
   };
 
+  const handleDelete = async (videoId) => {
+    if (!window.confirm("Delete this educational video?")) return;
+
+    try {
+      await educationService.remove(videoId);
+      setMessage("Video deleted successfully.");
+      loadVideos();
+    } catch (error) {
+      setMessage(error?.response?.data?.message || "Delete failed.");
+    }
+  };
+
   return (
     <>
       <div className="d-flex justify-content-between align-items-center mb-4">
@@ -89,8 +101,17 @@ const EduCollect = () => {
           {videos.map((video) => (
             <div className="col-md-6" key={video.id}>
               <div className="content-card">
-                <h2 className="h5">{video.title}</h2>
-                <p className="text-muted mb-3">Uploaded by {video.uploaded_by_name}</p>
+                <div className="d-flex justify-content-between align-items-start gap-2">
+                  <div>
+                    <h2 className="h5">{video.title}</h2>
+                    <p className="text-muted mb-3">Uploaded by {video.uploaded_by_name}</p>
+                  </div>
+                  {user?.role === "admin" && (
+                    <button className="btn btn-outline-danger btn-sm" onClick={() => handleDelete(video.id)}>
+                      Delete
+                    </button>
+                  )}
+                </div>
                 <video className="w-100" controls src={video.video_url} />
                 <p className="mt-3">{video.description}</p>
               </div>
